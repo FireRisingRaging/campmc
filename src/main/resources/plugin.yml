@@ -1,0 +1,6 @@
+name: CampMC
+version: ${project.version}
+main: me.firerising.campmc.Main
+api-version: 1.17
+authors: [ FireRising ]
+description: A version of the CampMC plugin
