@@ -3,4 +3,93 @@ version: ${project.version}
 main: me.firerising.campmc.Main
 api-version: 1.17
 authors: [ FireRising ]
-description: A version of the CampMC plugin
+description: A plugin for the campMC server
+softdepend: [PlayerPoints, HolographicDisplays, Holograms, CMI, Vault, dynmap, ItemsAdder, Slimefun, ItemBridge]
+
+loadbefore: [WorldGuard]
+commands:
+  c:
+    description: Reloads the configuration file
+    default: true
+    aliases: [camp, claim, claims, CampMC]
+    usage: /CampMC reload
+permissions:
+  CampMC.*:
+    description: Inherits all plugin permissions
+    children:
+      CampMC.bypass: true
+      CampMC.toggle.hostilemobspawning: true
+      CampMC.toggle.firespread: true
+      CampMC.toggle.pvp: true
+      CampMC.toggle.mobgriefing: true
+      CampMC.toggle.leafdecay: true
+      CampMC.accept: true
+      CampMC.ban: true
+      CampMC.claim: true
+      CampMC.dissolve: true
+      CampMC.home: true
+      CampMC.invite: true
+      CampMC.kick: true
+      CampMC.leave: true
+      CampMC.lock: true
+      CampMC.recipe: true
+      CampMC.sethome: true
+      CampMC.unban: true
+      CampMC.unclaim: true
+  CampMC.bypass:
+    description: Allows a player or admin to bypass claim restrictions.
+    default: op
+  CampMC.toggle.hostilemobspawning:
+    description: Allows the claim owner to toggle mob spawning.
+    default: op
+  CampMC.toggle.firespread:
+    description: Allows the claim owner to toggle fire spread.
+    default: op
+  CampMC.toggle.pvp:
+    description: Allows the claim owner to toggle pvp.
+    default: op
+  CampMC.toggle.mobgriefing:
+    description: Allows the claim owner to toggle mob griefing.
+    default: op
+  CampMC.toggle.leafdecay:
+    description: Allows the claim owner to toggle leaf decay.
+    default: op
+  CampMC.accept:
+    description: Accept the latest claim invitation.
+    default: op
+  CampMC.ban:
+    description: Ban a member from your claim.
+    default: op
+  CampMC.claim:
+    description: Claim the land you are currently standing in for your claim.
+    default: op
+  CampMC.dissolve:
+    description: Dissolve your claim.
+    default: op
+  CampMC.home:
+    description: Go to a claims home.
+    default: op
+  CampMC.invite:
+    description: Invite a player to join your claim.
+    default: op
+  CampMC.kick:
+    description: Kick a member from your claim.
+    default: op
+  CampMC.leave:
+    description: Leave a claim that you are a member of.
+    default: op
+  CampMC.lock:
+    description: Lock or unlock your claim.
+    default: op
+  CampMC.recipe:
+    description: View the recipe for a powercell.
+    default: op
+  CampMC.sethome:
+    description: Set the home for your claim.
+    default: op
+  CampMC.unban:
+    description: Unban a member from your claim.
+    default: op
+  CampMC.unclaim:
+    description: Unclaim land from your claim.
+    default: op
